@@ -1,0 +1,63 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link rel="stylesheet" href="/default.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <div class="container">
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+              <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/new">new</a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </nav>
+
+        </div>
+
+        <p>Image Name: <%= image.ImgName %></p>	
+
+        <!-- <form action="/<%= image._id %>/edit?_method=PUT" method="post">
+            <input type="text" id="url" name="id">
+            <button type="submit">submit</button>
+        </form> -->
+
+        <form action="/<%= image._id %>/edit?_method=PUT" method="post">
+	        <div class="input-form">
+			  <label for="ImgURL" class="form-label">Image URL</label>
+			  <input type="url" value="<%= image.ImgURL %>" class="form-control" id="ImgURL" name="ImgURL">
+			</div>
+			<div class="input-form">
+			  <label for="ImgDetails" class="form-label">Image Details</label>
+			  <textarea class="form-control" id="ImgDetails" rows="3" name="ImgDetails"><%= image.ImgDetails %></textarea>
+			</div>
+
+			<button type="submit" class="btn btn-primary">Update</button>
+		</form>
+        
+        
+       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+       	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    </body>
+</html>
