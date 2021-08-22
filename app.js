@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
 
 
 app.use(express.static("public"));
-mongoose.connect(process.env.DB_STRING, { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://imageAPP:123@cluster0.ibpam.mongodb.net/imageDB?retryWrites=true&w=majority", { useNewUrlParser: true });
 
 const imageSchema = {
     ImgName: String,
@@ -114,6 +114,6 @@ app.delete("/delete/:id", function(req, res) {
 });
 
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
     console.log("Server started on port 3000");
 });
