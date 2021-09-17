@@ -28,3 +28,11 @@ img {
 form {
 	z-index: -5;
 }
+
+footer {
+    background-color: #0d6efd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
